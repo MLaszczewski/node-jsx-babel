@@ -1,20 +1,20 @@
-# node-jsx
+# node-jsx-babel
 
-Transparently `require()` jsx from node.
+Transparently `require()` jsx from node with [babel](https://babeljs.io/)
 
 ## Usage
 
-`require('node-jsx').install()`
+`require('node-jsx-babel').install()`
 
 If you want to use a different extension, do:
 
-`require('node-jsx').install({extension: '.jsx'})`
+`require('node-jsx-babel').install({extension: '.jsx'})`
 
 If you want to couple with an additional transform (such as CoffeeScript), do:
 
 ```
 var coffee = require('coffee-script');
-require('node-jsx').install({
+require('node-jsx-babel').install({
   extension: '.coffee',
   additionalTransform: function(src) {
     return coffee.compile(src, {
@@ -23,7 +23,10 @@ require('node-jsx').install({
   }
 });
 ```
+## About target React version
 
-If you want to use [ES6 transforms](https://github.com/facebook/jstransform/tree/master/visitors) available in the JSX tool
+This version was build for React v0.14 branch, with babel transformer.
 
-`require('node-jsx').install({harmony: true})`
+## Acknowledgement
+
+[Pete Hunt](https://github.com/petehunt/) for base verson of [node-jsx](https://github.com/petehunt/node-jsx)
