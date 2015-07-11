@@ -1,5 +1,4 @@
-/** @jsx React.DOM */
+var React           = require('react');
+var ReactDOMServer  = require('react-dom/server');
 
-var React = require('react');
-
-module.exports = React.renderToString(<div />);
+module.exports = ReactDOMServer.renderToString(<div />);
