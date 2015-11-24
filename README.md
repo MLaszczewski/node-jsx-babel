@@ -6,9 +6,9 @@ Transparently `require()` jsx from node with [babel](https://babeljs.io/)
 
 `require('node-jsx-babel').install()`
 
-If you want to use a different extension, do:
+If you want to use a different extension than `.jsx`, do:
 
-`require('node-jsx-babel').install({extension: '.jsx'})`
+`require('node-jsx-babel').install({extension: '.foo'})`
 
 If you want to couple with an additional transform (such as CoffeeScript), do:
 
