@@ -10,7 +10,7 @@ function install(options) {
 
   options = options || {};
 
-  require.extensions[options.extension || '.js'] = function(module, filename) {
+  require.extensions[options.extension || '.jsx'] = function(module, filename) {
 
     var src = fs.readFileSync(filename, {encoding: 'utf8'});
     if (typeof options.additionalTransform == 'function') {
@@ -21,7 +21,7 @@ function install(options) {
       }
     }
     try {
-      src = babel.transform(src, { filename: filename, ast : false }).code;
+      src = babel.transform(src, { filename: filename, ast : false, presets : ['react'] }).code;
     } catch (e) {
       throw Error('Error transforming ' + filename + ' to JS: ' + e.toString());
     }
