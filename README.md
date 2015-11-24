@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Meettya/node-jsx-babel.svg?branch=master)](https://travis-ci.org/Meettya/node-jsx-babel)
+
 # node-jsx-babel
 
 Transparently `require()` jsx from node with [babel](https://babeljs.io/)
