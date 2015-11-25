@@ -4,6 +4,10 @@
 
 Transparently `require()` jsx from node with [babel](https://babeljs.io/)
 
+## Breaking changes
+
+This version change default extension from `.js` to `.jsx`, due to `.js` extension overwrite base node parser and will case an exception.
+
 ## Usage
 
 `require('node-jsx-babel').install()`
@@ -29,6 +33,6 @@ require('node-jsx-babel').install({
 
 This version was build for React v0.14 branch, with babel transformer.
 
-## Acknowledgement
+## Acknowledgment
 
-[Pete Hunt](https://github.com/petehunt/) for base verson of [node-jsx](https://github.com/petehunt/node-jsx)
+[Pete Hunt](https://github.com/petehunt/) for base version of [node-jsx](https://github.com/petehunt/node-jsx)
