@@ -1,6 +1,6 @@
 {
   "name": "node-jsx-babel",
-  "version": "0.14.1",
+  "version": "0.14.2",
   "description": "transparently require() jsx from node with babel transform",
   "main": "index.js",
   "dependencies": {
@@ -8,7 +8,7 @@
     "babel-preset-react":"6.x"
   },
   "devDependencies": {
-    "jasmine-node": "1.12.0",
+    "jasmine-node": "1.x",
     "react": "0.14.x",
     "react-dom": "0.14.x"
   },

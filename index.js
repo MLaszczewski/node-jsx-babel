@@ -1,5 +1,10 @@
 var fs    = require('fs');
 var babel = require('babel-core');
+/* 
+    HACK - we are require preset and send it as object instead of jast name to avoid path problem
+    https://phabricator.babeljs.io/T6692
+*/
+var preset_react  = require('babel-preset-react');
 
 var installed = false;
 
@@ -21,7 +26,7 @@ function install(options) {
       }
     }
     try {
-      src = babel.transform(src, { filename: filename, ast : false, presets : ['react'] }).code;
+      src = babel.transform(src, { filename: filename, ast : false, presets : [preset_react] }).code;
     } catch (e) {
       throw Error('Error transforming ' + filename + ' to JS: ' + e.toString());
     }
